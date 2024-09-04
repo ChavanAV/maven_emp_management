@@ -21,7 +21,7 @@ public class EmpView {
                 System.out.println("4. View employee details");
                 System.out.println("5. View all employee details");
                 System.out.println("6. Exit");
-                System.out.print("Enter your choise: ");
+                System.out.print("Enter your choice: ");
                 int c = sc.nextInt();
                 switch (c){
                     case 1:
@@ -51,8 +51,10 @@ public class EmpView {
                         System.out.println("Enter correct choice.");
                 }
             }
-        }catch (SQLException e){
-            throw new RuntimeException(e);
+        }catch (SQLException | RuntimeException e){
+            System.out.println();
+            System.out.println("Something wrong happened..!!!");
+            System.out.println(e);
         }
     }
 
